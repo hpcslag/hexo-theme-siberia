@@ -1,0 +1,119 @@
+<article id="<%= post.layout %>-<%= post.slug %>" class="article" itemscope itemprop="blogPost">
+    <div id="" class="index-article-content">
+        <% if(post.fbg){ %>
+        <% } %>
+
+        <% if(post.ftag){ %>
+            <div class="feature-tag def-font">
+                <a href="#"><%= theme.ftags[post.ftag] %></a>
+            </div>
+        <% } %>
+
+        <% if (post.link || post.title){ %>
+            <div class="index-post-title">
+                <% if (post.link){ %>
+                    <h1 itemprop="name">
+                        <a href="<%- url_for(post.link) %>" target="_blank" itemprop="url"><%= post.title %></a>
+                    </h1>
+                <% } else if (post.title){ %>
+                    <% if (index){ %>
+                        <h1 itemprop="name">
+                            <a href="<%- url_for(post.path) %>"><%= post.title %></a>
+                        </h1>
+                    <% } else { %>
+                        <h1 itemprop="name">
+                            <%= post.title %>
+                        </h1>
+                    <% } %>
+                <% } %>
+            </header>
+        <% } %>
+
+        <div class="author-info">
+            <p>
+                <% var date = new Date(page.date); %>
+                <% if(post.author){ %><%= __('author') %>: <%= post.author %>, <%= __('date') %>: <% } %><%= date.getFullYear() + "/" + date.getMonth() + "/" + date.getDate() %>
+            </p>
+        </div>
+        <div class="content-tag-list">
+            <%= __('tags') %>:
+            <% if (post.tags && post.tags.length){ %>
+                <%- list_tags(post.tags, {
+                    show_count: false,
+                    class: 'def-font article-tag', 
+                }) %>
+            <% } %>
+        </div>
+
+        <hr class="content-split-line" />
+
+        <% if(post.fbg){ %>
+            <div class="content-feature-image">
+            <img class="" src="<%= post.fbg %>" alt="">
+            <% if(post.fbgdesc){ %>
+                <p class="img-desc def-font" style="margin-top: 0px;"><%- post.fbgdesc %></p>
+            <% } %>
+            </div>
+        <% } %>
+
+        <div class="article-entry">
+            <%- post.content %>
+        </div>
+
+        <hr class="content-split-line" />
+
+        <div>
+        <% if (!index && post.comments && config.disqus_shortname){ %>
+            <section id="comments">
+            <div id="disqus_thread">
+                <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            </div>
+            </section>
+        <% } %>
+        </div>
+
+        <hr class="content-split-line" />
+  </div>
+</article>
+
+
+
+<footer>
+    <div id="content-nav">
+        <!-- Next Post and Prev Post -->
+        <% if (page.prev || page.next){ %>
+            <div class="next-prev-post-section">
+                <% if (page.prev){ %>
+                    <a href="<%- url_for(page.prev.path) %>" id="prev-page" class="pn-section">
+                        <h2 id="prev-page-title">上一篇:</h2>
+                        <p class="styled-border">
+                            ←<% if (page.prev.title){ %>
+                            <%= page.prev.title %>
+                            <% } else { %>
+                            (no title)
+                            <% } %>
+                        </p>
+                    </a>
+                <% }else{ %>
+                    <a href="#"></a>
+                <% } %>
+                <% if (page.next){ %>
+                    <a href="<%- url_for(page.next.path) %>" id="next-page" class="pn-section">
+                        <h2 id="next-page-title">下一篇:</h2>
+                        <p class="styled-border">
+                            <% if (page.next.title){ %>
+                            <%= page.next.title %>
+                            <% } else { %>
+                            (no title)
+                            <% } %>→
+                        </p>
+                    </a>
+                <% }else{ %>
+                    <a href="#"></a>
+                <% } %>
+            </div>
+            <% } %>
+    </div>
+</footer>
+
+

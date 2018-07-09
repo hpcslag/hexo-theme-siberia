@@ -1,0 +1,61 @@
+<% if(!build_section){ %> <div class="archive-post-section"> <% } %>
+<article id="<%= post.layout %>-<%= post.slug %>" class="archive-article" itemscope itemprop="blogPost">
+    <div id="" class="archive-article-content">
+        <% if(post.ftag){ %>
+            <div class="feature-tag def-font">
+                <a href="#"><%= theme.ftags[post.ftag] %></a>
+            </div>
+        <% } %>
+
+        <% if(post.fbg){ %>
+            <div class="archive-feature-background">
+                <div class="archive-fbg-img" style="background: url(<%= post.fbg %>) no-repeat;"></div>
+            </div>
+
+            <style>
+                #<%= post.layout %>-<%= post.slug %> .archive-article-content .feature-tag{
+                    position: relative;
+                    top: 25px;
+                    left: 25px;
+                    z-index: 109;
+                    float: left;
+                }
+
+                #<%= post.layout %>-<%= post.slug %> .archive-article-content .feature-tag a{
+                    border: 1px solid white;
+                    color: white;
+                    padding: 3px 10px;
+                    font-size: 13px;
+                    width: max-content;
+                    display: block;
+                }
+
+                #<%= post.layout %>-<%= post.slug %> .archive-article-content .feature-tag a:before {
+                    border: none;
+                }
+            </style>
+        <% } %>
+
+        <% if (post.link || post.title){ %>
+            <div class="archive-post-title">
+                <% if (post.link){ %>
+                    <h1 itemprop="name">
+                        <a href="<%- url_for(post.link) %>" target="_blank" itemprop="url"><%= post.title %></a>
+                    </h1>
+                <% } else if (post.title){ %>
+                    <% if (index){ %>
+                        <h1 itemprop="name">
+                            <a href="<%- url_for(post.path) %>"><%= post.title %></a>
+                        </h1>
+                    <% } else { %>
+                        <h1 itemprop="name">
+                            <%= post.title %>
+                        </h1>
+                    <% } %>
+                <% } %>
+            </header>
+        <% } %>
+    </div>
+</article>
+
+<% if(build_section){ %> </div> <% } %>

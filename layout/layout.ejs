@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <%- partial('google-analytics') %>
+  <%
+  var title = page.title;
+
+  if (is_archive()){
+    title = __('archive_a');
+
+    if (is_month()){
+      title += ': ' + page.year + '/' + page.month;
+    } else if (is_year()){
+      title += ': ' + page.year;
+    }
+  } else if (is_category()){
+    title = __('category') + ': ' + page.category;
+  } else if (is_tag()){
+    title = __('tag') + ': ' + page.tag;
+  }
+  %>
+  <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <% if (theme.rss){ %>
+    <link rel="alternate" href="<%= url_for(theme.rss) %>" title="<%= config.title %>" type="application/atom+xml">
+  <% } %>
+  <% if (theme.favicon){ %>
+    <link rel="icon" href="<%- theme.favicon %>">
+  <% } %>
+  <% if (config.highlight.enable){ %>
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <% } %>
+  <% if(theme.mathjax_enable){ %>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_CHTML' async></script>
+  <% } %>
+  <%- css('css/style') %>
+  
+  <!-- load your font here -->
+  <script src="https://use.typekit.net/rtv1yrx.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  <!-- end to load your font. -->
+
+  <style type="text/css">
+    /* load setting */
+    #head-avator-image{
+      box-shadow: 0px 0px 0px 290px <%= theme.circle_color %>;
+    }
+    #head-title-context a{
+      color: <%= theme.title_text_color %>;
+      font-family: <%= theme.title_text_font %>;
+    }
+    #head-bio-context h3{
+      color: <%= theme.bio_text_color %>;
+      font-family: <%= theme.bio_text_font %>;
+    }
+    #head-avator-image div{
+      background: url( <%= theme.avator_image %> );
+      background-position-x: <%= theme.avator_image_position_x %>;
+      background-position-y: <%= theme.avator_image_position_y %>;
+    }
+    #banner{
+      background: <%= theme.banner %>;
+
+      -webkit-filter: <%= theme.banner_filter %>;
+      filter: <%= theme.banner_filter %>;
+
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      background-size: cover;
+      background-repeat: no-repeat;
+      z-index: -2;
+      width:100%;
+      height:100%;
+      background-size: calc(100% + 50px);
+    }
+    #bannermask{
+      background: <%= theme.banner_mask_color %>;
+      opacity: <%= theme.banner_mask_opacity %>;
+    }
+    #footer-background-mask{
+      background: <%= theme.banner %>;
+      background-position: bottom;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    body{
+      background: <%= theme.theme_style %>;
+    }
+    #footer {
+      color: <%= theme.footer_text_color %>;
+      background: <%= theme.footer_style %>;
+    }
+    .article-entry{
+      font-family: <%= theme.article_text_font %>;
+      font-size: <%= theme.article_text_size %>;
+      color: <%= theme.article_text_color %>;
+    }
+    .index-post-title h1, .archive-post-title h1{
+      font-family: <%= theme.article_text_font %>;
+    }
+
+    .article-entry a:hover{
+      color: <%= theme.article_link_color %>;
+    }
+
+    .img-desc, .def-font, #footer, #head-navigation a{
+      font-family: <%= theme.article_default_font %>;
+    }
+    
+    .pn-section{
+      color: <%= theme.prev_next_text_color %>;
+      font-family: <%= theme.article_text_font %>; /* apply article text font */
+    }
+
+    .pn-section:hover{
+      background: <%= theme.prev_next_button_color_hover %>;
+      color: <%= theme.prev_next_text_color_hover %>;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+      <%- partial('partial/banner', null, {cache: !config.relative_link}) %>
+      <div class="outer">
+        <section id="main"><%- body %></section>
+      </div>
+  </div>
+
+  <div id="footer-background-mask">
+    <div id="footer-background"></div>
+  </div>
+
+  <%- partial('partial/footer', null, {cache: !config.relative_link}) %>
+  <%- partial('partial/after-footer') %>
+
+  <script src="/js/effect.js"></script>
+  
+</body>
+</html>

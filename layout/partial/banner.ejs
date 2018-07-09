@@ -1,0 +1,17 @@
+<header id="header">
+    <nav id="head-navigation">
+        <% for (var i in theme.menu){ %>
+            <a class="item" href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
+        <% } %>
+    </nav>
+    <dir class="head-container-set" id="bannermask"></dir>
+    <div class="head-container-set" id="banner"></div>
+    <div id="head-title">
+        <div id="head-avator-image">
+            <div class="avator_image_set"></div>
+        </div>
+        <div id="head-title-context"><a href="/"><%= theme.title_text %></a></div>
+        <div id="head-bio-context"><h3><%= theme.bio %></h3></div>
+    </div>
+
+</header>

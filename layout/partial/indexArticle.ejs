@@ -1,0 +1,108 @@
+<article id="<%= post.layout %>-<%= post.slug %>" class="index-article" itemscope itemprop="blogPost">
+    <div id="" class="index-article-content">
+        <% if(post.fbg){ %>
+            <style>
+                #<%= post.layout %>-<%= post.slug %>.index-article{
+                    background: url(<%= post.fbg %>);
+                    -webkit-background-size: cover !important;
+                    -moz-background-size: cover !important;
+                    background-size: cover !important;
+                    background-repeat: no-repeat !important;
+
+                    color:white;
+                }
+
+                #<%= post.layout %>-<%= post.slug %> .index-post-title h1,#<%= post.layout %>-<%= post.slug %> .index-article-entry, #<%= post.layout %>-<%= post.slug %> .index-tag-list{
+                    color:white !important;
+                }
+
+                #<%= post.layout %>-<%= post.slug %> .index-article-content{
+                    z-index:-4;
+                    background: rgba(0,0,0,0.3);
+                }
+
+                #<%= post.layout %>-<%= post.slug %> .feature-tag a{
+                    border: 2px solid white;
+                }
+
+                #<%= post.layout %>-<%= post.slug %> .article-more-link{
+                    border: 1px solid white;
+                    background: #ffffff2b;
+
+                    color: white !important;
+
+                    margin-top:45px;
+                }
+
+                #<%= post.layout %>-<%= post.slug %> .article-more-link:hover{
+                    border: 1px solid white;
+                    background: white !important;
+                    color: black !important;
+                }
+                
+                #<%= post.layout %>-<%= post.slug %> .index-tag-list li{
+                    border-bottom: 2px solid #c7c7c7;
+                }
+
+                #<%= post.layout %>-<%= post.slug %> .index-tag-list li:hover{
+                    color:#14e3ff !important;
+                }
+
+            </style>
+
+            
+            <div class="feature-tag def-font">
+                <a href="#"><%= theme.ftags[post.ftag] %></a>
+            </div>
+        <% } %>
+
+        <% if (post.link || post.title){ %>
+            <div class="index-post-title">
+                <% if (post.link){ %>
+                    <h1 itemprop="name">
+                        <a href="<%- url_for(post.link) %>" target="_blank" itemprop="url"><%= post.title %></a>
+                    </h1>
+                <% } else if (post.title){ %>
+                    <% if (index){ %>
+                        <h1 itemprop="name">
+                            <a href="<%- url_for(post.path) %>"><%= post.title %></a>
+                        </h1>
+                    <% } else { %>
+                        <h1 itemprop="name">
+                            <%= post.title %>
+                        </h1>
+                    <% } %>
+                <% } %>
+            </header>
+        <% } %>
+
+        <div class="index-article-entry def-font">
+            <% if (post.excerpt && index){ %>
+              <%- post.excerpt %>
+              <% if (theme.excerpt_link){ %>
+                <a class="article-more-link" href="<%- url_for(post.path) %>#more">
+                    <%= theme.excerpt_link %>
+                </a>
+              <% } %>
+            <% } else { %>
+              <%- post.content %>
+            <% } %>
+        </div>
+
+        <div class="index-tag-list">
+            <% if (post.tags && post.tags.length){ %>
+                <%- list_tags(post.tags, {
+                    show_count: false,
+                    class: 'def-font article-tag', 
+                }) %>
+            <% } %>
+
+            <br>
+            <p class="index-other-info">
+                <% if (post.comments && config.disqus_shortname){ %>
+                    <a href="<%- post.permalink %>#disqus_thread" class="article-comment-link"><%= __('comment') %></a>
+                <% } %>
+            </p>
+        </div>
+    </div>
+</article>
