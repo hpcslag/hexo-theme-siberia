@@ -60,10 +60,9 @@
             <%- post.content %>
         </div>
 
-        <hr class="content-split-line" />
-
-        <div>
         <% if (!index && post.comments && config.disqus_shortname){ %>
+        <hr class="content-split-line" />
+        <div>
             <section id="comments">
             <div id="disqus_thread">
                 <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
