@@ -84,7 +84,7 @@
             <div class="next-prev-post-section">
                 <% if (page.prev){ %>
                     <a href="<%- url_for(page.prev.path) %>" id="prev-page" class="pn-section">
-                        <h2 id="prev-page-title">上一篇:</h2>
+                        <h2 id="prev-page-title"><%= __("prev") %>:</h2>
                         <p class="styled-border">
                             ←<% if (page.prev.title){ %>
                             <%= page.prev.title %>
@@ -98,7 +98,7 @@
                 <% } %>
                 <% if (page.next){ %>
                     <a href="<%- url_for(page.next.path) %>" id="next-page" class="pn-section">
-                        <h2 id="next-page-title">下一篇:</h2>
+                        <h2 id="next-page-title"><%= __("next") %>:</h2>
                         <p class="styled-border">
                             <% if (page.next.title){ %>
                             <%= page.next.title %>
