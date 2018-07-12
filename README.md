@@ -163,11 +163,75 @@ fbgdesc: ＮＨＫサイエンス スタジアム２０１６
 ---
 ```
 
-
 # Blog Config
+
+Setup these configuration on `<hexo_root>/<theme>/_config.yml`.
+
+![](https://i.imgur.com/gWUSI77.png)
+
+| Name | YAML Key | Value | Example |
+| -- | -- | -- | -- |
+| Title | title_text | String | `Modern Siberia` |
+| Bio | bio | String | `Do my best so I can't blame my self for anything.` |
+| Avator | avator_image | URI Path | `/avator.jpg`(<hexo_root>/<theme>/source/) |
+| Banner | banner | CSS Background | `url(/background/blur-cars-dew-125510.jpg)`(<hexo_root>/<theme>/source/background) |
 
 
 # Theme Style Config
+
+Setup these configuration on `<hexo_root>/<theme>/_config.yml`.
+
+### Title Style
+
+| Name | YAML Key | Value | Example |
+| -- | -- | -- | -- |
+| Title Color | title_text_color | CSS Colors | `"#4d4d4d"` |
+| Title Font | title_text_font | String | `"Artegra Sans Alt"` |
+
+### Bio Style
+
+| Name | YAML Key | Value | Example |
+| -- | -- | -- | -- |
+| Bio Color | bio_text_color | CSS Colors | `"#0061b5"` |
+| Bio Font | bio_text_font | String | `"PT Serif"` |
+
+### Header Style
+
+| Name | YAML Key | Value | Example |
+| -- | -- | -- | -- |
+| Avator Image Position Offset (X) | avator_image_position_x | CSS Units | `"-31px"` |
+| Avator Image Position Offset (Y) | avator_image_position_y | CSS Units | `"0px"` |
+| Circle Color | circle_color | CSS Colors | `rgba(83, 207, 220, 0.7)` |
+| Banner Filter Effects | banner_filter | CSS Filters | `"blur(2px) grayscale(20%)"` |
+| Banner Mask Color | banner_mask_color | CSS Colors | `"#ffffff"` |
+| Banner Mask Opacity | banner_mask_opacity | Float | 0.0 |
+
+### Body Style
+
+| Name | YAML Key | Value | Example |
+| -- | -- | -- | -- |
+| Body Background  | theme_style | CSS Background | `"#f2f2f2"` |
+| Footer Background | footer_style | CSS Background | `"#151719"` |
+| Footer Copyright Text Color| footer_text_color | CSS Colors | `"#8a8a8a"` |
+
+### Article Reading Style
+
+| Name | YAML Key | Value | Example |
+| -- | -- | -- | -- |
+| Article Text Size | article_text_size | CSS Units | `"19px"` |
+| Article Text Color | article_text_color | CSS Colors | `"#151717"` |
+| Article Link Color | article_link_color | CSS Colors | `"#29bcd0"` |
+| Article Text Font | article_text_font | String | `"source-han-serif-tc"` |
+| Article Title Font | article_title_font | String | `"source-han-serif-tc"` |
+| Article Default Font | article_default_font | String | `Helvetica Neue, Helvetica, Microsoft JhengHei , Arial, sans-serif` |
+
+### Layout Style
+
+| Name | YAML Key | Value | Example |
+| -- | -- | -- | -- |
+| Background Color of Page Navigation In Article When Hovered | prev_next_button_color_hover |  CSS Colors | `"#151719"` |
+| Text Color of Page Navigation In Article | prev_next_text_color | CSS Colors | `"#151719"` |
+| Text Color of Page Navigation In Article WHen Hovered | prev_next_text_color_hover | CSS Colors | `white` |
 
 # Theme Config For You
 
