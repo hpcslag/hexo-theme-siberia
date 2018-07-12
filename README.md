@@ -231,7 +231,7 @@ Setup these configuration on `<hexo_root>/<theme>/_config.yml`.
 | -- | -- | -- | -- |
 | Background Color of Page Navigation In Article When Hovered | prev_next_button_color_hover |  CSS Colors | `"#151719"` |
 | Text Color of Page Navigation In Article | prev_next_text_color | CSS Colors | `"#151719"` |
-| Text Color of Page Navigation In Article WHen Hovered | prev_next_text_color_hover | CSS Colors | `white` |
+| Text Color of Page Navigation In Article When Hovered | prev_next_text_color_hover | CSS Colors | `white` |
 
 # Theme Config For You
 
