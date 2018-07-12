@@ -181,7 +181,8 @@ Setup these configuration on `<hexo_root>/<theme>/_config.yml`.
 
 Setup these configuration on `<hexo_root>/<theme>/_config.yml`.
 
-** Web Fonts Support **
+**Web Fonts Support**
+
 Additional Web Fonts is set in `<hexo_root>/<theme>/layout/layout.ejs`, add your scripts between the mark `<!-- load your font here -->`.
 
 ### Title Style
