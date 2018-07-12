@@ -60,7 +60,6 @@ header{
     margin-left: 15px;
 
     width: 30em;
-    overflow-x: scroll;
     white-space: nowrap;
     display: flex;
 }
@@ -179,6 +178,7 @@ header{
 
 .index-article{
     width: 90%;
+    max-width: 1000px;
     margin: 0px auto;
 
     /* view */
@@ -406,6 +406,9 @@ overflow: hidden;
     .content-split-line{
         display: inline-block;
     }
+}
+.content-feature-image{
+    text-align: center;
 }
 
 .content-feature-image img{

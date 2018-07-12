@@ -2,7 +2,6 @@
 menu:
   Home: /
   Archives: /archives
-  測試: /#
 
 rss: /atom.xml
 
@@ -60,8 +59,7 @@ excerpt_link: Read More
 
 #Feature Tags Translate (Only shows in one Language)
 ftags:
-  china_culture: 中國文化
-  goods: 精選內容
+  ghost_story: Ghost Story
 
 
 # Miscellaneous
