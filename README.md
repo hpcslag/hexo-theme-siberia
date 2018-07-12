@@ -239,6 +239,8 @@ Additional Web Fonts is set in `<hexo_root>/<theme>/layout/layout.ejs`, add your
 
 # Theme Config For You
 
+There are some color theme for you, please check out this **[Folder](https://github.com/hpcslag/hexo-theme-siberia/tree/master/colors)**.
+
 # LICENSE
 **Hexo Theme - Siberia** is released under the [MIT License.](https://github.com/hpcslag/hexo-theme-siberia/blob/master/LICENSE)
 
