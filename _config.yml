@@ -67,3 +67,4 @@ ftags:
 # Miscellaneous
 google_analytics:
 favicon: /favicon.png
+theme: jekyll-theme-merlot
