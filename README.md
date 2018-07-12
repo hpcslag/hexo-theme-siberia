@@ -18,6 +18,7 @@ theme: siberia
 3. Restart Hexo Server.
 
 # Plugin Supports
+
 | Name | Default Enabled | Default with Installed |
 | -- | -- | -- |
 | MathJax.js | no | yes |
