@@ -1,0 +1,56 @@
+title_text: Elektronik Trends
+title_text_color: "#4d4d4d"
+title_text_font: "
+'Libre Barcode 128 Text'
+"
+
+#Bio Settings (using css function)
+bio: Kreativer Blog über Technik, Elektronik, DIY und das Leben.
+bio_text_color: "#bfbfbf"
+bio_text_font: "'Titillium Web', sans-serif"
+
+#Banner Settings(using css function)
+avator_image: /avator.jpg #Default Photo Made by Krysten Merriman (https://www.pexels.com/photo/cat-whiskers-kitty-tabby-20787/)
+avator_image_position_x: "-31px"
+avator_image_position_y: "0px"
+circle_color: "--"
+banner: "none" #Default Photo Made by Kaique Rocha (https://www.pexels.com/photo/blur-cars-dew-drops-125510/)
+banner_filter: "none"
+banner_mask_color: "#ffffff"
+banner_mask_opacity: 0
+
+#Body color (using css function)
+theme_style: "white"
+body_mask: 
+footer_style: "#f7f7f7"
+footer_text_color: "#257dd4"
+
+#Article Reading Style (using css function)
+article_text_size: "19px"
+
+article_text_color: "#151717"
+
+article_link_color: "#29bcd0"
+
+article_text_font: "'Titillium Web', sans-serif"
+article_title_font: "'Libre Barcode 128 Text'"
+article_default_font: Helvetica Neue, Helvetica, Microsoft JhengHei , Arial, sans-serif
+
+#Layout Setting (using css function)
+prev_next_button_color_hover: "#151719"
+prev_next_text_color: "#151719"
+prev_next_text_color_hover: white
+
+#append style
+append_style: "
+  @import url('https://fonts.googleapis.com/css?family=Libre+Barcode+128+Text|Titillium+Web');
+  #head-navigation a {
+    color: #333333;
+  }
+  #footer-background-mask{
+    display:none;
+  }
+  .archive-year-wrap a {
+    background: #ffffff;
+  }
+"
