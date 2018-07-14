@@ -51,11 +51,11 @@
     }
     #head-title-context a{
       color: <%= theme.title_text_color %>;
-      font-family: <%= theme.title_text_font %>;
+      font-family: <%- strip_html(theme.title_text_font) %>;
     }
     #head-bio-context h3{
       color: <%= theme.bio_text_color %>;
-      font-family: <%= theme.bio_text_font %>;
+      font-family: <%- strip_html(theme.bio_text_font) %>;
     }
     #head-avator-image div{
       background: url( <%= theme.avator_image %> );
@@ -100,12 +100,12 @@
       background: <%= theme.footer_style %>;
     }
     .article-entry{
-      font-family: <%= theme.article_text_font %>;
+      font-family: <%- strip_html(theme.article_text_font) %>;
       font-size: <%= theme.article_text_size %>;
       color: <%= theme.article_text_color %>;
     }
     .index-post-title h1, .archive-post-title h1{
-      font-family: <%= theme.article_text_font %>;
+      font-family: <%- strip_html(theme.article_text_font) %>;
     }
 
     .article-entry a:hover{
@@ -113,12 +113,12 @@
     }
 
     .img-desc, .def-font, #footer, #head-navigation a{
-      font-family: <%= theme.article_default_font %>;
+      font-family: <%- strip_html(theme.article_default_font) %>;
     }
     
     .pn-section{
       color: <%= theme.prev_next_text_color %>;
-      font-family: <%= theme.article_text_font %>; /* apply article text font */
+      font-family: <%- strip_html(theme.article_text_font) %>; /* apply article text font */
     }
 
     .pn-section:hover{
@@ -126,7 +126,7 @@
       color: <%= theme.prev_next_text_color_hover %>;
     }
 
-    <%= theme.append_style %>
+    <%- strip_html(theme.append_style) %>
   </style>
 </head>
 <body>
