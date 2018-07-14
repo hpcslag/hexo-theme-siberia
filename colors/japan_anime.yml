@@ -63,4 +63,31 @@ append_style: "
           height: auto;
       }
   }
+  .archive-year-wrap::before {
+    border: none;
+  }
+  .archive-year-wrap a {
+    background: #0f6bca;
+    font-family: 'Noto Serif' ,'PT Serif' ,'source-han-serif-tc',Songti TC,serif!important;
+    font-style: italic;
+    padding: 3px 21px 5px;
+    border-radius: 20px;
+    position: relative;
+    top: 14px;
+    color: white;
+  }
+  .archives{
+    background: rgba(255, 255, 255, 0.8);
+  }
+  @media only screen and (max-width: 550px) {
+    section#main{
+      background: rgba(255, 255, 255, 0.8);
+    }
+    .archive-year-wrap a {
+      top: -14px;
+    }
+    .archives-wrap {
+      overflow: inherit;
+    }
+  }
 "
