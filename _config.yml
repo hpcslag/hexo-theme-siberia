@@ -50,6 +50,9 @@ prev_next_button_color_hover: "#151719"
 prev_next_text_color: "#151719"
 prev_next_text_color_hover: white
 
+#append style
+append_style: ""
+
 #Feature
 mathjax_enable: true
 
