@@ -30,6 +30,7 @@ banner_mask_opacity: 0
 
 #Body color (using css function)
 theme_style: "#f2f2f2"
+body_mask: 
 footer_style: "#151719"
 footer_text_color: "#8a8a8a"
 

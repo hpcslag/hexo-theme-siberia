@@ -92,6 +92,9 @@
     body{
       background: <%= theme.theme_style %>;
     }
+    #body-mask{
+      background: <%= theme.body_mask %>;
+    }
     #footer {
       color: <%= theme.footer_text_color %>;
       background: <%= theme.footer_style %>;
@@ -125,6 +128,7 @@
   </style>
 </head>
 <body>
+  <div id="body-mask"></div>
   <div id="container">
       <%- partial('partial/banner', null, {cache: !config.relative_link}) %>
       <div class="outer">
