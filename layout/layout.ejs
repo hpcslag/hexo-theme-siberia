@@ -45,6 +45,8 @@
   <!-- end to load your font. -->
 
   <style type="text/css">
+    <%- strip_html(theme.append_style) %>
+
     /* load setting */
     #head-avator-image{
       box-shadow: 0px 0px 0px 290px <%= theme.circle_color %>;
@@ -125,8 +127,6 @@
       background: <%= theme.prev_next_button_color_hover %>;
       color: <%= theme.prev_next_text_color_hover %>;
     }
-
-    <%- strip_html(theme.append_style) %>
   </style>
 </head>
 <body>
