@@ -1,0 +1,71 @@
+# Title Settings (using css function)
+title_text: The Asia Foodie
+title_text_color: white
+title_text_font: "'Kalam', cursive"
+
+#Bio Settings (using css function)
+bio: Do my best so I can't blame my self for anything.
+bio_text_color: "#262626"
+bio_text_font: "'Barlow', sans-serif; font-size:22px"
+
+#Banner Settings(using css function)
+avator_image: /avator.jpg #Default Photo Made by Krysten Merriman (https://www.pexels.com/photo/cat-whiskers-kitty-tabby-20787/)
+avator_image_position_x: "-31px"
+avator_image_position_y: "0px"
+circle_color: rgba(123, 220, 83, 0.5)
+banner: "url(/background/beverages-brunch-cocktail-5317.jpg)" #Default Photo Made by Kaique Rocha (https://www.pexels.com/photo/blur-cars-dew-drops-125510/)
+banner_filter: "blur(2px) grayscale(20%)"
+banner_mask_color: "#ffffff"
+banner_mask_opacity: 0
+
+#Body color (using css function)
+theme_style: "#f1f2f4"
+body_mask: 
+footer_style: "#151719"
+footer_text_color: "#8a8a8a"
+
+#Article Reading Style (using css function)
+article_text_size: "19px"
+
+article_text_color: "#151717"
+
+article_link_color: "#29bcd0"
+
+article_text_font: "'Noto Sans TC', sans-serif"
+article_title_font: "'Noto Sans TC', sans-serif"
+article_default_font: Helvetica Neue, Helvetica, Microsoft JhengHei , Arial, sans-serif
+
+#Layout Setting (using css function)
+prev_next_button_color_hover: "#151719"
+prev_next_text_color: "#151719"
+prev_next_text_color_hover: white
+
+#append style
+append_style: "
+  @import url('https://fonts.googleapis.com/css?family=Barlow:300|Kalam:700');
+  @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+  .archive-post-title{
+    background: white;
+    text-align: left;
+    padding-left: 35px;
+    padding-bottom: 50px;
+  }
+  .archive-post-title h1{
+    width: 90%;
+  }
+  .archive-article-content .feature-tag {
+    position: absolute !important;
+    top: unset !important;
+    bottom: 25px !important;
+    left: 37px !important;
+  }
+  .archive-article-content .feature-tag a {
+    border: none !important;;
+    color: #909090 !important;
+    padding: 3px 0px !important;;
+    position: relative !important;;
+  }
+  .archive-year-wrap a {
+    background: #f1f2f4;
+  }
+"
