@@ -15,3 +15,8 @@
 **Copy the config code:** [barcode_paper.yml](https://github.com/hpcslag/hexo-theme-siberia/blob/master/colors/barcode_paper.yml)
 
 ![](https://i.imgur.com/m4LTo8f.png)
+
+## Foodie
+
+**Copy the config code:** [foodie.yml](https://github.com/hpcslag/hexo-theme-siberia/blob/master/colors/foodie.yml)
+![](https://i.imgur.com/Pw4eUiX.jpg)
