@@ -3,7 +3,7 @@ Focus eye on reading, the posts on siberia.
 
 # Install
 
-1. Move to your hexo `themes` folder and enter the following line.
+1. Move to your hexo `<hexo_root>` folder and enter the following line.
 
 ```
 git clone https://github.com/hpcslag/hexo-theme-siberia.git themes/siberia
